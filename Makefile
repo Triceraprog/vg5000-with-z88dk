@@ -14,9 +14,9 @@ all: adventure
 
 adventure: ${OBJS}
 	${LINK} ${LINK_FLAGS} $^ -o $@
-	cat $@.k7 zero-file > $@.fix.k7
+	cat $@.k7 zero-file > $@.fix.k7  # Waiting for the fix to be deployed in the offical package
 
 
 clean:
 	rm -f ${OBJS}
-	rm -f adventure adventure.k7
+	rm -f adventure adventure.k7 adventure.fix.k7

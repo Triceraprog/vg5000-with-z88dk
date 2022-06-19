@@ -11,7 +11,8 @@ z88dk.zcc +vg5k -zorg=18956 main.c
 vg5k -natural -max -cass a.k7 -debug
 
 
-# Why 9 ?
+# Waiting for the fix to be deployed. z88dk didn't initially added
+# the expected trailing 10 zeros in the data
 dd if=/dev/zero of=zero-file bs=1 count=9
 z88dk.zcc +vg5k -create-app main.c
 cat a.k7 zero-file > b.k7
