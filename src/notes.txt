@@ -16,3 +16,5 @@ vg5k -natural -max -cass a.k7 -debug
 dd if=/dev/zero of=zero-file bs=1 count=9
 z88dk.zcc +vg5k -create-app main.c
 cat a.k7 zero-file > b.k7
+
+export Z88DK_HOME=/snap
