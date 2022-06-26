@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 3.20)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
 # TODO: Add ASM language support
-# project(adventure C ASM)
-project(adventure C)
+# project(vg_tests C ASM)
+project(vg_tests C)
 # enable_language(ASM)
 
 # If need for cmake debug, the next line can help

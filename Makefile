@@ -1,3 +1,6 @@
+# This is a simple reference makefile to build VG5000 programs with z88k
+# It is not used by the project
+
 SOURCES = src/main.c
 
 CC = z88dk.zcc
@@ -7,16 +10,16 @@ LINK_FLAGS = +vg5k -create-app
 
 OBJS = $(patsubst %.c,%.o, $(SOURCES))
 
-all: adventure
+all: vg_tests
 
 %o: %.c
 	${CC} ${CFLAGS} -c $<
 
-adventure: ${OBJS}
+vg_tests: ${OBJS}
 	${LINK} ${LINK_FLAGS} $^ -o $@
 	cat $@.k7 zero-file > $@.fix.k7  # Waiting for the fix to be deployed in the offical package
 
 
 clean:
 	rm -f ${OBJS}
-	rm -f adventure adventure.k7 adventure.fix.k7
+	rm -f vg_tests vg_tests.k7 vg_tests.fix.k7
